@@ -2,10 +2,11 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import ROUTES from '../../app/routes';
+import { selectQuizzes } from './quizzesSlice';
 
 const Quizzes = () => {
 
-    const quizzes = {}; //replace this with a call to your selector to get all your quizzes in state
+    const quizzes = useSelector(selectQuizzes);
 
     return (
         <section className='center'>
